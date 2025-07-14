@@ -28,7 +28,7 @@ This repository contains the implementation of the homepage for Maedric Jewelry'
 1. Clone the repository:
 
    ```bash
-   git clone 
+   git clone https://github.com/nishashetty1/maedric-homepage
 
 2. Install the dependencies:
 
