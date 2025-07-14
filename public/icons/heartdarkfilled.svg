@@ -1,0 +1,24 @@
+<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-5.0867" y="-4.69559" width="36.1734" height="33.3914"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2.78px);clip-path:url(#bgblur_0_1526_511_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_ii_1526_511)" data-figma-bg-blur-radius="5.56522">
+<path d="M25.522 8.05973C25.522 16.1776 13.9181 22.7484 13.424 23.0198C13.2937 23.0925 13.1481 23.1305 13.0003 23.1305C12.8524 23.1305 12.7068 23.0925 12.5765 23.0198C12.0824 22.7484 0.478516 16.1776 0.478516 8.05973C0.480587 6.15346 1.21155 4.32587 2.51104 2.97793C3.81054 1.62999 5.57243 0.871778 7.41019 0.869629C9.71889 0.869629 11.7403 1.89944 13.0003 3.64014C14.2603 1.89944 16.2816 0.869629 18.5903 0.869629C20.4281 0.871778 22.19 1.62999 23.4895 2.97793C24.789 4.32587 25.5199 6.15346 25.522 8.05973Z" fill="#051E33"/>
+</g>
+<defs>
+<filter id="filter0_ii_1526_511" x="-5.0867" y="-4.69559" width="36.1734" height="33.3914" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.85507"/>
+<feGaussianBlur stdDeviation="1.85507"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.38 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1526_511"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.85507"/>
+<feGaussianBlur stdDeviation="18.5507"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0196078 0 0 0 0 0.117647 0 0 0 0 0.2 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_1526_511" result="effect2_innerShadow_1526_511"/>
+</filter>
+<clipPath id="bgblur_0_1526_511_clip_path" transform="translate(5.0867 4.69559)"><path d="M25.522 8.05973C25.522 16.1776 13.9181 22.7484 13.424 23.0198C13.2937 23.0925 13.1481 23.1305 13.0003 23.1305C12.8524 23.1305 12.7068 23.0925 12.5765 23.0198C12.0824 22.7484 0.478516 16.1776 0.478516 8.05973C0.480587 6.15346 1.21155 4.32587 2.51104 2.97793C3.81054 1.62999 5.57243 0.871778 7.41019 0.869629C9.71889 0.869629 11.7403 1.89944 13.0003 3.64014C14.2603 1.89944 16.2816 0.869629 18.5903 0.869629C20.4281 0.871778 22.19 1.62999 23.4895 2.97793C24.789 4.32587 25.5199 6.15346 25.522 8.05973Z"/>
+</clipPath></defs>
+</svg>

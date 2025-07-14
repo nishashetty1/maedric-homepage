@@ -1,0 +1,47 @@
+"use client"
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+
+const PopularBox = ({ id, image, category, name, isFavorite = false }) => {
+  const [favorite, setFavorite] = useState(isFavorite);
+
+  const toggleFavorite = () => {
+    setFavorite(!favorite);
+  };
+
+  return (
+    <div className="relative group">
+      <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-200">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+        />
+        
+        {/* Favorite button */}
+        <button
+          onClick={toggleFavorite}
+          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/60 flex items-center justify-center z-10 transition-all hover:bg-white cursor-pointer"
+          aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
+        >
+          <Image
+            src={favorite ? '/icons/heartdarkfilled.svg' : '/icons/heartdark.svg'}
+            width={20}
+            height={20}
+            alt="Heart icon"
+          />
+        </button>
+      </div>
+      
+      <div className="mt-3">
+        <p className="text-sm text-gray-500">{category}</p>
+        <h3 className="text-[var(--foreground)] font-medium">{name}</h3>
+      </div>
+    </div>
+  );
+};
+
+export default PopularBox;
