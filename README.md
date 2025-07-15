@@ -2,6 +2,8 @@
 
 This repository contains the implementation of the homepage for Maedric Jewelry's website. The homepage showcases Maedric's luxury jewellery brand identity with interactive components and a responsive design.
 
+[Live Link](https://maedric-homepage.vercel.app/)
+
 ## Features
 
 - Responsive design for mobile, tablet, and desktop views
