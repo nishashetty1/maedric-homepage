@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import PopularBox from '../ui/PopularBox';
 import Heading from '../ui/Heading';
+import Link from 'next/link';
 
 const Popular = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -99,21 +100,35 @@ const Popular = () => {
         Popular Jewellery
       </Heading>
 
-      <p className="text-center mt-4 mb-12 text-gray-600 max-w-3xl mx-auto">
+      <Heading
+        as="body-light"
+        align="center"
+        color="primary"
+        className="mt-4 mb-12 max-w-4xl mx-auto"
+      >
         Discover what everyone&apos;s loving right now — our most popular pieces, handpicked based on what&apos;s
         trending with Maedric customers this season.
-      </p>
+      </Heading>
 
       <div className="flex justify-end mb-4 px-4">
-        <a href="#" className="flex items-center gap-3 text-[var(--foreground)] hover:text-[var(--accent)]">
-          View All
-          <Image
-            src="/icons/arrowright.svg"
-            width={10}
-            height={10}
-            alt="Next"
-          />
-        </a>
+
+        <Link href="/collections" className="group inline-flex items-center gap-4">
+            <Heading
+              as="subheading"
+              align="left"
+              color="primary"
+              className="text-[var(--primary)] font-medium !mb-0"
+            >
+              View All
+            </Heading>
+            <Image
+              src="/icons/arrowright.svg"
+              alt="Arrow Right Icon"
+              width={10}
+              height={8}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
       </div>
 
       <div className="relative px-12">

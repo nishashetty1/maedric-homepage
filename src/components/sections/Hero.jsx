@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../ui/Button';
 import WhatsappButton from '../ui/WhatsappButton';
+import Heading from '../ui/Heading';
 
 const Hero = () => {
     return (
@@ -21,10 +22,15 @@ const Hero = () => {
 
             {/* Content Overlay - Desktop */}
             <div className="hidden md:flex absolute w-full h-full top-0 left-0 flex-col justify-end z-10">
-                <div className="w-full max-w-[700px] px-8 pb-16 lg:pb-20 lg:pl-20">
-                    <h1 className="font-[Figtree] font-medium text-[32px] md:text-[40px] lg:text-[48px] leading-tight text-[var(--default)] mb-6">
+                <div className="flex flex-col w-full max-w-[700px] px-8 pb-16 lg:pb-20 lg:pl-20">
+                    
+                    <Heading
+                        as="header-text"
+                        align="left"
+                        className="text-[32px] md:text-[40px] lg:text-[48px] leading-tight text-[var(--default)] mb-8"
+                    >
                         Want one of your own?
-                    </h1>
+                    </Heading>
 
                     <div className="mt-6">
                         <Button

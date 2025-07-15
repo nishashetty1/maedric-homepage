@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Heading from './Heading';
 
 const PopularBox = ({ id, image, category, name, isFavorite = false }) => {
   const [favorite, setFavorite] = useState(isFavorite);
@@ -20,7 +21,7 @@ const PopularBox = ({ id, image, category, name, isFavorite = false }) => {
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
-        
+
         {/* Favorite button */}
         <button
           onClick={toggleFavorite}
@@ -35,10 +36,25 @@ const PopularBox = ({ id, image, category, name, isFavorite = false }) => {
           />
         </button>
       </div>
-      
+
       <div className="mt-3">
-        <p className="text-sm text-gray-500">{category}</p>
-        <h3 className="text-[var(--foreground)] font-medium">{name}</h3>
+        <Heading
+          as="body"
+          align="left"
+          color="var(--consultationForm)"
+          className="!mb-0"
+        >
+          {category}
+        </Heading>
+
+        <Heading
+          as="body-large"
+          align="left"
+          color="var(--primary)"
+          className="mt-1"
+        >
+          {name}
+        </Heading>
       </div>
     </div>
   );

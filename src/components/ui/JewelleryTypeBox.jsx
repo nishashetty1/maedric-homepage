@@ -3,14 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import Heading from './Heading';
 
-/**
- * Responsive JewelleryTypeBox component
- * - Adapts size based on screen width
- * - Maintains aspect ratio
- * - Properly scales images and text
- * - Smooth hover effects
- */
 export const JewelleryTypeBox = ({
   title,
   defaultImage,
@@ -19,15 +13,10 @@ export const JewelleryTypeBox = ({
   className = "",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isTitleHovered, setIsTitleHovered] = useState(false);
 
   // Handle mouse events for image
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
-
-  // Handle mouse events for title
-  const handleTitleMouseEnter = () => setIsTitleHovered(true);
-  const handleTitleMouseLeave = () => setIsTitleHovered(false);
 
   const boxContent = (
     <>
@@ -73,17 +62,15 @@ export const JewelleryTypeBox = ({
       {title && (
         <div
           className="w-full mt-2 sm:mt-3 text-center"
-          onMouseEnter={handleTitleMouseEnter}
-          onMouseLeave={handleTitleMouseLeave}
         >
-          <span
-            className={`font-[Figtree] font-normal text-base sm:text-lg md:text-xl text-[var(--primary)] ${isTitleHovered
-                ? "underline decoration-solid underline-offset-4"
-                : ""
-              }`}
+          <Heading
+            as="header-text"
+            align="center"
+            color="primary"
+            className="!text-[20px] mb-8 hover:underline decoration-solid underline-offset-4"
           >
             {title}
-          </span>
+          </Heading>
         </div>
       )}
     </>

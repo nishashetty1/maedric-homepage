@@ -117,7 +117,7 @@ const JewelleryConsultation = () => {
 
   return (
     <section className="py-12 w-full md:py-16 px-4 md:px-8 max-w-[1400px] mx-auto" ref={formRef}>
-      <div className="text-center mb-8 md:mb-12">
+      <div className="text-center mb-8 md:mb-12 hidden md:block">
         <Heading
           as="h2"
           align="center"
@@ -130,6 +130,16 @@ const JewelleryConsultation = () => {
           Tell us a bit about your vision, and we'll guide you through each step to create something truly personal and timeless.
         </p>
       </div>
+
+      {activeTab && (
+        <Heading
+          as="h2"
+          align="center"
+          className="mb-8 text-[var(--primary)] md:text-[var(--consultationForm)]"
+        >
+          {tabTitle[activeTab]}
+        </Heading>
+      )}
 
       <div className="flex align-center justify-center mb-12">
         <TabButtons
@@ -153,12 +163,7 @@ const JewelleryConsultation = () => {
           transition={{ duration: 0.3 }}
         >
           {activeTab ? (
-            <>
-              <h2 className="text-2xl md:text-3xl text-[var(--primary)] font-light text-center mb-8">
-                {tabTitle[activeTab]}
-              </h2>
-              <ConsultationForm type={activeTab} />
-            </>
+            <ConsultationForm type={activeTab} />
           ) : !isMobile ? aboutFounder : <ConsultationForm type="Bridal" />}
         </motion.div>
       </AnimatePresence>

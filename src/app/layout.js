@@ -1,17 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/globals.css";
-
-// Existing Geist fonts
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 // Add Figtree font with all needed weights
 const figtree = Figtree({
@@ -22,6 +11,22 @@ const figtree = Figtree({
 });
 
 // Quiche Display
+const quicheDisplay = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Quiche_Display_Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Quiche_Display_Medium.otf',
+      weight: '500',
+      style: 'normal',
+    }
+  ],
+  variable: "--font-quiche-display",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Maedric HomePage",
@@ -35,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} antialiased`}
+        className={`${figtree.variable} ${quicheDisplay.variable} antialiased`}
       >
         {children}
       </body>

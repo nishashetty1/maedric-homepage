@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Button from "../ui/Button";
+import Heading from "../ui/Heading";
 
 const Explore = () => {
   return (
@@ -20,8 +20,23 @@ const Explore = () => {
         <div className="absolute inset-0 bg-white opacity-40"></div>
         <div className="absolute inset-0 flex flex-col justify-start p-10">
           <div>
-            <h2 className="text-2xl md:text-3xl font-medium text-[var(--primary)] leading-tight mb-2">Jewel Boutique.</h2>
-            <h2 className="text-2xl md:text-3xl font-medium text-[var(--primary)] leading-tight mb-12 md:mb-16">Lives Beyond Trends.</h2>
+            <Heading
+              as="h2"
+              align="left"
+              color="primary"
+              className="text-[var(--primary)] font-normal !mb-0"
+            >
+              Jewel Boutique.
+            </Heading>
+  
+            <Heading
+              as="h2"
+              align="left"
+              color="primary"
+              className="text-[var(--primary)] font-normal !mb-0"
+            >
+              Lives Beyond Trends.
+            </Heading>
           </div>
           <div className="mt-auto">
             <Button
@@ -45,8 +60,23 @@ const Explore = () => {
         <div className="absolute inset-0 bg-white opacity-40"></div>
         <div className="absolute inset-0 flex flex-col justify-start p-10">
           <div>
-            <h2 className="text-2xl md:text-3xl font-medium text-[var(--primary)] leading-tight mb-2">Rare Gems.</h2>
-            <h2 className="text-2xl md:text-3xl font-medium text-[var(--primary)] leading-tight mb-12 md:mb-16">Remarkable Stories.</h2>
+            <Heading
+              as="h2"
+              align="left"
+              color="primary"
+              className="text-[var(--primary)] font-normal !mb-0"
+            >
+              Rare Gems.
+            </Heading>
+
+            <Heading
+              as="h2"
+              align="left"
+              color="primary"
+              className="text-[var(--primary)] font-normal !mb-0"
+            >
+              Remarkable Stories.
+            </Heading>
           </div>
           <div className="mt-auto">
             <Button

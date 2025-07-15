@@ -87,22 +87,24 @@ const Process = ({ className = "" }) => {
                     className="text-3xl sm:text-4xl md:text-5xl mb-4 text-[var(--primary)]"
                     style={{ fontFamily: "Figtree, sans-serif" }}
                 >
-                    
+
                 </h2>
                 <Heading
-                            as="h1"
-                            align="center"
-                            color="primary"
-                            className="mb-8"
-                        >
-                            From Desire to Design, Promise to Product
-                        </Heading>
-                <p
-                    className="text-sm sm:text-base md:text-lg text-[var(--primary)] mx-auto text-justify"
-                    style={{ fontFamily: "Figtree, sans-serif" }}
+                    as="h2"
+                    align="center"
+                    color="primary"
+                    className="mb-8"
+                >
+                    From Desire to Design, Promise to Product
+                </Heading>
+                <Heading
+                    as="body-light"
+                    align="center"
+                    color="primary"
+                    className="mb-8"
                 >
                     At Maedric, each piece begins with your story. To ensure a truly personal and seamless experience, we guide you through a refined process from interest to delivery.
-                </p>
+                </Heading>
             </div>
 
             {/* Process steps container */}
@@ -150,22 +152,25 @@ const Process = ({ className = "" }) => {
                                 </div>
 
                                 {/* Content Container */}
-                                <div className="flex flex-col ml-4 sm:ml-6 mt-4">
+                                <div className="flex flex-col justify-center ml-4 sm:ml-6 mt-4 overflow-hidden">
                                     {/* Title */}
+
                                     <h3
-                                        className="text-center text-[16px] sm:text-[18px] font-medium leading-[16px] mb-6 text-[var(--primary)]"
+                                        className="text-center text-[16px] sm:text-[18px] font-medium leading-[16px] mb-2 text-[var(--primary)]"
                                         style={{ fontFamily: "Figtree, sans-serif" }}
                                     >
                                         {step.title}
                                     </h3>
 
                                     {/* Description */}
-                                    <p
-                                        className="text-center text-[12px] leading-[20px] font-light font-weight-300 text-[var(--primary)]"
-                                        style={{ fontFamily: "Figtree, sans-serif" }}
+                                    <Heading
+                                        as="body-light"
+                                        align="center"
+                                        color="primary"
+                                        className="!text-[12px]"
                                     >
                                         {step.content}
-                                    </p>
+                                    </Heading>
                                 </div>
                             </div>
                         </div>

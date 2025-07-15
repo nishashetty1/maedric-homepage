@@ -21,16 +21,21 @@ const Banner = () => {
                 >
                     <div className="max-w-6xl mx-auto">
                         <Heading
-                            as="h1"
+                            as="h2"
                             align="center"
                             color="background"
                             className="mb-8"
                         >
                             Looking for something truly one-of-a-kind?
                         </Heading>
-                        <p className="text-white text-center text-xl mb-10">
-                            Let us source rare gemstones or craft<br />bespoke pieces tailored just for you.
-                        </p>
+                        <Heading
+                            as="body-light"
+                            align="center"
+                            color="var(--background)"
+                            className="mt-4 mb-12 mx-auto "
+                        >
+                            Let us source rare gemstones or craft bespoke pieces tailored just for you.
+                        </Heading>
                         <div className="flex justify-center gap-6">
                             <Button
                                 variant="cta"

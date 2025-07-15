@@ -32,20 +32,22 @@ const Testimonial = () => {
     <>
       {/* Desktop View */}
       <div className="hidden md:block w-full py-16 max-w-[1400px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-center text-[var(--foreground)]">
-
-        </h2>
         <Heading
-          as="h1"
+          as="h2"
           align="center"
           color="primary"
           className="mb-8"
         >
           Client Testimonials
         </Heading>
-        <p className="text-center mt-4 mb-12 text-gray-600">
-          Real stories from those who wear Maedric with pride.
-        </p>
+        <Heading
+          as="body-light"
+          align="center"
+          color="primary"
+          className="mb-8"
+        >
+          Real stories from those who wear Maedric with pride.        
+          </Heading>
 
         <div className="relative max-w-[1200px] mx-auto px-14">
           {/* Navigation Arrows */}
@@ -107,7 +109,7 @@ const Testimonial = () => {
                           alt="Ring close-up"
                           layout="fill"
                           objectFit="cover"
-                          priority     
+                          priority
                         />
                       </div>
                     </div>
@@ -149,7 +151,7 @@ const Testimonial = () => {
             <div className="w-full lg:w-1/2">
               <blockquote className="text-lg text-[var(--foreground)]">
                 <Heading
-                  as="body"
+                  as="body-light"
                   align="justify"
                   color="primary"
                   className="mb-8"
