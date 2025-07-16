@@ -1,11 +1,16 @@
-"use client"
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import Heading from '@/components/ui/Heading';
+import React from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import Heading from "@/components/ui/Heading";
 
-const TestimonialSlide = ({ testimonial, currentSlide, nextSlide, prevSlide }) => {
+const TestimonialSlide = ({
+  testimonial,
+  currentSlide,
+  nextSlide,
+  prevSlide,
+}) => {
   return (
     <div className="w-full max-w-[400px] mx-auto relative px-10">
       {/* Navigation buttons positioned outside the main content */}
@@ -45,12 +50,7 @@ const TestimonialSlide = ({ testimonial, currentSlide, nextSlide, prevSlide }) =
           transition={{ duration: 0.5 }}
           className="w-full"
         >
-          <Heading
-            as="h2"
-            align="center"
-            color="white"
-            className="mb-8"
-          >
+          <Heading as="h2" align="center" color="white" className="mb-8">
             Client Story
           </Heading>
           <Heading
@@ -120,12 +120,7 @@ const TestimonialSlide = ({ testimonial, currentSlide, nextSlide, prevSlide }) =
                   "{testimonial.quote}"
                 </Heading>
 
-                <Heading
-                  as="h4"
-                  align="right"
-                  color="white"
-                  className="!mb-2"
-                >
+                <Heading as="h4" align="right" color="white" className="!mb-2">
                   {testimonial.name}, {testimonial.location}
                 </Heading>
               </blockquote>

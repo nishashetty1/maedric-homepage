@@ -47,23 +47,26 @@ const CollectionCard = ({ index }) => {
       </div>
 
       <div className="absolute bottom-0 left-0 p-2 xs:p-3 sm:p-4 w-full bg-transparent backdrop-blur-sm">
-        <Link href="/collections" className="group inline-flex items-center gap-4">
-            <Heading
-              as="subheading"
-              align="left"
-              color="primary"
-              className="text-[var(--primary)] font-medium !mb-0"
-            >
-              Shop Collection
-            </Heading>
-            <Image
-              src="/icons/arrowright.svg"
-              alt="Arrow Right Icon"
-              width={10}
-              height={8}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
+        <Link
+          href="/collections"
+          className="group inline-flex items-center gap-4"
+        >
+          <Heading
+            as="subheading"
+            align="left"
+            color="primary"
+            className="text-[var(--primary)] font-medium !mb-0"
+          >
+            Shop Collection
+          </Heading>
+          <Image
+            src="/icons/arrowright.svg"
+            alt="Arrow Right Icon"
+            width={10}
+            height={8}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Link>
       </div>
     </div>
   );
@@ -73,16 +76,22 @@ const Collections = () => {
   return (
     <section className="w-full mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-[1400px]">
       <div className="flex flex-wrap justify-between items-center md:mb-4">
-        <Heading
-          as="h2"
-          align="center"
-          color="primary"
-          className="!md:text-left"
-        >
-          Our Collections
-        </Heading>
+        <div className="w-full md:w-auto text-center md:text-left">
+          <Heading
+            as="h2"
+            align="left"
+            color="primary"
+            className="mb-8 md:mb-0 text-center"
+          >
+            Our Collections
+          </Heading>
+        </div>
+
         <div className="hidden md:block">
-          <Link href="/collections" className="group inline-flex items-center gap-4">
+          <Link
+            href="/collections"
+            className="group inline-flex items-center gap-4"
+          >
             <Heading
               as="subheading"
               align="left"
@@ -113,7 +122,7 @@ const Collections = () => {
             transition={{
               duration: 0.5,
               delay: index * 0.1,
-              ease: "easeOut"
+              ease: "easeOut",
             }}
           >
             <CollectionCard index={index} />
@@ -122,23 +131,26 @@ const Collections = () => {
       </div>
 
       <div className="mt-3 sm:mt-4 text-right md:hidden">
-        <Link href="/collections" className="group inline-flex items-center gap-2 pr-2">
-            <Heading
-              as="subheading"
-              align="left"
-              color="primary"
-              className="text-[var(--primary)] font-medium !mb-0"
-            >
-              View All
-            </Heading>
-            <Image
-              src="/icons/arrowright.svg"
-              alt="Arrow Right Icon"
-              width={8}
-              height={6}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
+        <Link
+          href="/collections"
+          className="group inline-flex items-center gap-2 pr-2"
+        >
+          <Heading
+            as="subheading"
+            align="left"
+            color="primary"
+            className="text-[var(--primary)] font-medium !mb-0"
+          >
+            View All
+          </Heading>
+          <Image
+            src="/icons/arrowright.svg"
+            alt="Arrow Right Icon"
+            width={8}
+            height={6}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Link>
       </div>
     </section>
   );

@@ -1,25 +1,47 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import TestimonialSlide from '../ui/TestimonialSlide';
-import Heading from '../ui/Heading';
+import React, { useState } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import TestimonialSlide from "../ui/TestimonialSlide";
+import Heading from "../ui/Heading";
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const testimonial = {
-    name: "Ivan Teo",
-    location: "Singapore",
-    quote: "I am beyond grateful to Maedric for helping me create the perfect engagement ring. With his/their expert guidance on diamond selection and design, we crafted a ring that my girlfriend absolutely adores. The craftsmanship and attention to detail were impeccable, and it was clear that Maedric genuinely cares about delivering the best. My fiancé hasn't stopped admiring the ring since I proposed, and I couldn't be happier with the final result. If you're looking for a beautiful, custom-made ring with exceptional service, I highly recommend Maedric.",
-    images: [
-      "/images/testimonials/testimonial1.png",
-      "/images/testimonials/testimonial2.png"
-    ]
-  };
+  const testimonials = [
+    {
+      name: "Ivan Teo",
+      location: "Singapore",
+      quote:
+        "I am beyond grateful to Maedric for helping me create the perfect engagement ring. With his/their expert guidance on diamond selection and design, we crafted a ring that my girlfriend absolutely adores. The craftsmanship and attention to detail were impeccable, and it was clear that Maedric genuinely cares about delivering the best. My fiancé hasn't stopped admiring the ring since I proposed, and I couldn't be happier with the final result. If you're looking for a beautiful, custom-made ring with exceptional service, I highly recommend Maedric.",
+      images: [
+        "/images/testimonials/testimonial1.png",
+        "/images/testimonials/testimonial2.png",
+      ],
+    },
+    {
+      name: "Ivan Teo",
+      location: "Singapore",
+      quote:
+        "I am beyond grateful to Maedric for helping me create the perfect engagement ring. With his/their expert guidance on diamond selection and design, we crafted a ring that my girlfriend absolutely adores. The craftsmanship and attention to detail were impeccable, and it was clear that Maedric genuinely cares about delivering the best. My fiancé hasn't stopped admiring the ring since I proposed, and I couldn't be happier with the final result. If you're looking for a beautiful, custom-made ring with exceptional service, I highly recommend Maedric.",
+      images: [
+        "/images/testimonials/testimonial1.png",
+        "/images/testimonials/testimonial2.png",
+      ],
+    },
+    {
+      name: "Ivan Teo",
+      location: "Singapore",
+      quote:
+        "I am beyond grateful to Maedric for helping me create the perfect engagement ring. With his/their expert guidance on diamond selection and design, we crafted a ring that my girlfriend absolutely adores. The craftsmanship and attention to detail were impeccable, and it was clear that Maedric genuinely cares about delivering the best. My fiancé hasn't stopped admiring the ring since I proposed, and I couldn't be happier with the final result. If you're looking for a beautiful, custom-made ring with exceptional service, I highly recommend Maedric.",
+      images: [
+        "/images/testimonials/testimonial1.png",
+        "/images/testimonials/testimonial2.png",
+      ],
+    },
+  ];
 
-  // For desktop view - 3 different slides
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % 3);
   };
@@ -32,12 +54,7 @@ const Testimonial = () => {
     <>
       {/* Desktop View */}
       <div className="hidden md:block w-full py-16 max-w-[1400px] mx-auto">
-        <Heading
-          as="h2"
-          align="center"
-          color="primary"
-          className="mb-8"
-        >
+        <Heading as="h2" align="center" color="primary" className="mb-8">
           Client Testimonials
         </Heading>
         <Heading
@@ -46,8 +63,8 @@ const Testimonial = () => {
           color="primary"
           className="mb-8"
         >
-          Real stories from those who wear Maedric with pride.        
-          </Heading>
+          Real stories from those who wear Maedric with pride.
+        </Heading>
 
         <div className="relative max-w-[1200px] mx-auto px-14">
           {/* Navigation Arrows */}
@@ -94,7 +111,7 @@ const Testimonial = () => {
                       {/* Main image*/}
                       <div className="relative w-[400px] h-full shadow-xl">
                         <Image
-                          src={testimonial.images[0]}
+                          src={testimonials[0].images[0]}
                           alt="Client testimonial"
                           layout="fill"
                           objectFit="cover"
@@ -105,7 +122,7 @@ const Testimonial = () => {
                       {/* Overlay image - positioned absolutely */}
                       <div className="absolute -right-0 top-40 w-40 h-40">
                         <Image
-                          src={testimonial.images[1]}
+                          src={testimonials[0].images[1]}
                           alt="Ring close-up"
                           layout="fill"
                           objectFit="cover"
@@ -120,7 +137,7 @@ const Testimonial = () => {
                     <div className="p-4 relative h-full">
                       <div className="relative w-[full] h-full">
                         <Image
-                          src={testimonial.images[0]}
+                          src={testimonials[1].images[0]}
                           alt="Client testimonial"
                           layout="fill"
                           objectFit="contain"
@@ -135,7 +152,7 @@ const Testimonial = () => {
                     <div className="p-4 relative h-full">
                       <div className="relative w-full h-full">
                         <Image
-                          src={testimonial.images[1]}
+                          src={testimonials[2].images[1]}
                           alt="Ring close-up"
                           layout="fill"
                           objectFit="contain"
@@ -149,19 +166,36 @@ const Testimonial = () => {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <blockquote className="text-lg text-[var(--foreground)]">
-                <Heading
-                  as="body-light"
-                  align="justify"
-                  color="primary"
-                  className="mb-8"
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  "{testimonial.quote}"
-                </Heading>
-                <footer className="font-semibold text-right text-xl">
-                  {testimonial.name} <span className="font-normal">, {testimonial.location}</span>
-                </footer>
-              </blockquote>
+                  <blockquote className="text-lg text-[var(--foreground)]">
+                    <Heading
+                      as="body-light"
+                      align="justify"
+                      color="primary"
+                      className="mb-8"
+                    >
+                      "{testimonials[currentSlide].quote}"
+                    </Heading>
+
+                    <Heading
+                      as="h4"
+                      align="right"
+                      color="primary"
+                      className="!mb-2"
+                    >
+                      {testimonials[currentSlide].name},{" "}
+                      {testimonials[currentSlide].location}
+                    </Heading>
+                  </blockquote>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
@@ -170,7 +204,7 @@ const Testimonial = () => {
       {/* Mobile View */}
       <div className="md:hidden w-full bg-[var(--primary)] py-10">
         <TestimonialSlide
-          testimonial={testimonial}
+          testimonial={testimonials[currentSlide]}
           currentSlide={currentSlide}
           nextSlide={nextSlide}
           prevSlide={prevSlide}

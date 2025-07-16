@@ -28,7 +28,7 @@ const Explore = () => {
             >
               Jewel Boutique.
             </Heading>
-  
+
             <Heading
               as="h2"
               align="left"
@@ -39,11 +39,7 @@ const Explore = () => {
             </Heading>
           </div>
           <div className="mt-auto">
-            <Button
-              variant="outlined"
-            >
-              Explore Jewellery
-            </Button>
+            <Button variant="outlined">Explore Jewellery</Button>
           </div>
         </div>
       </div>
@@ -79,11 +75,7 @@ const Explore = () => {
             </Heading>
           </div>
           <div className="mt-auto">
-            <Button
-              variant="outlined"
-            >
-              Explore Gemstones
-            </Button>
+            <Button variant="outlined">Explore Gemstones</Button>
           </div>
         </div>
       </div>
