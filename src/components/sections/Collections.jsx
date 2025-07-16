@@ -11,7 +11,7 @@ const CollectionCard = ({ index }) => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-md"
+      className="relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -72,12 +72,12 @@ const CollectionCard = ({ index }) => {
 const Collections = () => {
   return (
     <section className="w-full mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-[1400px]">
-      <div className="flex flex-wrap justify-between items-center mb-4 sm:mb-6">
+      <div className="flex flex-wrap justify-between items-center md:mb-4">
         <Heading
           as="h2"
-          align="left"
+          align="center"
           color="primary"
-          className="mb-8"
+          className="!md:text-left"
         >
           Our Collections
         </Heading>
@@ -103,7 +103,7 @@ const Collections = () => {
       </div>
 
       {/* Maintain consistent columns across breakpoints */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 md:gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 md:gap-5 px-1">
         {[1, 2, 3, 4].map((index) => (
           <motion.div
             key={index}
@@ -121,8 +121,8 @@ const Collections = () => {
         ))}
       </div>
 
-      <div className="mt-4 sm:mt-6 text-right md:hidden">
-        <Link href="/collections" className="group inline-flex items-center gap-4">
+      <div className="mt-3 sm:mt-4 text-right md:hidden">
+        <Link href="/collections" className="group inline-flex items-center gap-2 pr-2">
             <Heading
               as="subheading"
               align="left"

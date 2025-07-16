@@ -92,9 +92,9 @@ const JewelleryType = () => {
                         </div>
 
                         {/* Second row - 2 items (centered) */}
-                        <div className="grid grid-cols-2 gap-4 w-full max-w-[350px] mx-auto">
+                        <div className="flex justify-center gap-2 xs:gap-3 w-full">
                             {jewelleryTypes.slice(3).map((item) => (
-                                <div key={item.id} className="flex justify-center">
+                                <div key={item.id} className="w-1/3">
                                     <JewelleryTypeBox
                                         title={item.title}
                                         defaultImage={item.defaultImage}

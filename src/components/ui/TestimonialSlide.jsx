@@ -8,61 +8,62 @@ import Heading from '@/components/ui/Heading';
 const TestimonialSlide = ({ testimonial, currentSlide, nextSlide, prevSlide }) => {
   return (
     <div className="w-full max-w-[400px] mx-auto relative px-10">
-      <Heading
-        as="h2"
-        align="center"
-        color="white"
-        className="mb-8"
-      >
-        Client Story
-      </Heading>
-      <Heading
-        as="body-light"
-        align="center"
-        color="white"
-        className="mb-8"
-      >
-        Real stories from those who wear Maedric with pride.
-      </Heading>
-
-      {/* Navigation buttons positioned outside the content */}
+      {/* Navigation buttons positioned outside the main content */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/3 transform -translate-y-1/2 z-10 opacity-80"
-        aria-label="Previous image"
+        className="absolute left-3 top-2/5 transform -translate-y-1/2 z-20 opacity-80"
+        aria-label="Previous testimonial"
       >
         <Image
           src="/icons/arrowleftLight.svg"
-          width={16}
-          height={16}
+          width={10}
+          height={10}
           alt="Previous"
         />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/3 transform -translate-y-1/2 z-10 opacity-80"
-        aria-label="Next image"
+        className="absolute right-3 top-2/5 transform -translate-y-1/2 z-20 opacity-80"
+        aria-label="Next testimonial"
       >
         <Image
           src="/icons/arrowrightLight.svg"
-          width={16}
-          height={16}
+          width={10}
+          height={10}
           alt="Next"
         />
       </button>
 
-      <div className="flex flex-col">
-        <div className="relative w-full mx-auto aspect-square">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="w-full h-full relative"
-            >
+      {/* AnimatePresence wrapper around the entire content */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full"
+        >
+          <Heading
+            as="h2"
+            align="center"
+            color="white"
+            className="mb-8"
+          >
+            Client Story
+          </Heading>
+          <Heading
+            as="body-light"
+            align="center"
+            color="white"
+            className="mb-8"
+          >
+            Real stories from those who wear Maedric with pride.
+          </Heading>
+
+          <div className="flex flex-col">
+            <div className="relative w-full mx-auto aspect-square">
               {/* Mobile Slide 0: First image (testimonial1) */}
               {currentSlide === 0 && (
                 <div className="relative w-full h-full">
@@ -106,19 +107,32 @@ const TestimonialSlide = ({ testimonial, currentSlide, nextSlide, prevSlide }) =
                   </div>
                 </div>
               )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+            </div>
 
-        <div className="w-full mt-6 text-white">
-          <blockquote className="text-sm">
-            <p className="mb-4 text-justify">"{testimonial.quote}"</p>
-            <footer className="font-semibold text-right text-base">
-              {testimonial.name} <span className="font-normal">, {testimonial.location}</span>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
+            <div className="w-full mt-6 text-white">
+              <blockquote className="text-sm">
+                <Heading
+                  as="body-light"
+                  align="justify"
+                  color="white"
+                  className="mb-4 !text-sm"
+                >
+                  "{testimonial.quote}"
+                </Heading>
+
+                <Heading
+                  as="h4"
+                  align="right"
+                  color="white"
+                  className="!mb-2"
+                >
+                  {testimonial.name}, {testimonial.location}
+                </Heading>
+              </blockquote>
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
