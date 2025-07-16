@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import Heading from './Heading';
+import Heading from "./Heading";
 
 export const JewelleryTypeBox = ({
   title,
@@ -31,8 +31,9 @@ export const JewelleryTypeBox = ({
       >
         {/* Default image */}
         <div
-          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${isHovered ? "opacity-0" : "opacity-100"
-            }`}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
+            isHovered ? "opacity-0" : "opacity-100"
+          }`}
         >
           <Image
             src={defaultImage}
@@ -45,8 +46,9 @@ export const JewelleryTypeBox = ({
 
         {/* Hover image */}
         <div
-          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
         >
           <Image
             src={hoverImage || defaultImage}
@@ -58,16 +60,14 @@ export const JewelleryTypeBox = ({
         </div>
       </div>
 
-      {/* Title below the box - Now responsive */}
+      {/* Title below the box */}
       {title && (
-        <div
-          className="w-full mt-2 sm:mt-3 text-center"
-        >
+        <div className="w-full mt-2 sm:mt-3 text-center">
           <Heading
             as="header-text"
             align="center"
             color="primary"
-            className="!text-[20px] mb-8 hover:underline decoration-solid underline-offset-4"
+            className="!text-[14px] mb-8 hover:underline decoration-solid underline-offset-4"
           >
             {title}
           </Heading>
