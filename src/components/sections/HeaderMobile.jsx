@@ -52,7 +52,7 @@ export default function HeaderMobile() {
     { label: "Gemstones", href: "/gemstones", hasDropdown: true },
     { label: "Jewellery", href: "/jewellery", hasDropdown: true },
     { label: "Services", href: "/services" },
-    { label: "Education", href: "/education" },
+    { label: "About", href: "/about" },
   ];
 
   return (

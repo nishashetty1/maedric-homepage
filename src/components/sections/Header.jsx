@@ -34,15 +34,13 @@ export default function Header() {
     { label: "Gemstones", href: "/gemstones", hasDropdown: true },
     { label: "Jewellery", href: "/jewellery", hasDropdown: true },
     { label: "Services", href: "/services" },
-    { label: "Education", href: "/education" },
+    { label: "About", href: "/about" },
   ];
 
   return (
     <header className="relative z-50 shadow-md bg-[var(--primary)] opacity-80 hidden md:block">
       {/* TOP BAR */}
-      <div className="
-          w-full text-[var(--secondary)]
-          border-b-[0.2px] border-[var(--default-border)]
+      <div className="w-full text-[var(--secondary)] border-b-[0.2px] border-[var(--default-border)]
           ">
         <div className="container mx-auto px-4 py-6 flex items-center justify-between">
           {/* Left section - empty for spacing */}
