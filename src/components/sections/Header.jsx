@@ -34,7 +34,7 @@ export default function Header() {
   // Track scroll position for sticky header
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -90,10 +90,10 @@ export default function Header() {
             {/* Logo - left on mobile, centered on desktop */}
             <div className="flex justify-start md:justify-center w-full md:w-1/3">
               <Link href="/" className="text-left md:text-center">
-                <h1 className="font-[Quiche_Display] font-extralight text-3xl md:text-4xl tracking-wider">
+                <h1 className="font-[Cinzel] font-extralight text-3xl md:text-5xl tracking-wider">
                   MAEDRIC
                 </h1>
-                <p className="text-[10px] md:texl-xl uppercase tracking-widest font-[Figtree]">
+                <p className="font-[Cinzel] text-[10px] md:text-[18px] uppercase tracking-widest">
                   Gemstones & Jewellery
                 </p>
               </Link>
@@ -130,10 +130,10 @@ export default function Header() {
               {/* mobile: show wishlist, cart, hamburger */}
               <div className="md:hidden flex items-center space-x-4">
                 <button aria-label="Wishlist" className="relative">
-                  <Image src="/icons/heart.svg" alt="Wishlist" width={18} height={18} style={{ maxWidth: 'none' }}/>
+                  <Image src="/icons/heart.svg" alt="Wishlist" width={18} height={18} style={{ maxWidth: 'none' }} />
                 </button>
                 <button aria-label="Cart" className="relative">
-                  <Image src="/icons/cart.svg" alt="Cart" width={18} height={18} style={{ maxWidth: 'none' }}/>
+                  <Image src="/icons/cart.svg" alt="Cart" width={18} height={18} style={{ maxWidth: 'none' }} />
                   <span className="absolute -top-2 -right-2 bg-[var(--accent)] text-[var(--primary)] rounded-full text-[10px] font-bold px-1">
                     1
                   </span>
@@ -166,7 +166,7 @@ export default function Header() {
                 <div key={link.label} className="relative group">
                   <Link
                     href={link.href}
-                    className="hover:text-[var(--accent)] transition py-2 block"
+                    className="font-[Figtree] hover:text-[var(--accent)] transition py-2 block"
                   >
                     {link.label}
                   </Link>

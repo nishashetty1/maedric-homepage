@@ -1,4 +1,4 @@
-import { Figtree } from "next/font/google";
+import { Figtree, Cinzel } from "next/font/google";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 
@@ -7,6 +7,13 @@ const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"], // Light, Regular, Medium, Semibold, Bold
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Regular, Medium, Semibold, Bold
   display: "swap",
 });
 
@@ -40,7 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} ${quicheDisplay.variable} antialiased`}
+        className={`${figtree.variable} ${quicheDisplay.variable} ${cinzel.variable} antialiased`}
       >
         {children}
       </body>

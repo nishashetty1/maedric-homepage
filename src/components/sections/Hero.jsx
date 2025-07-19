@@ -5,7 +5,7 @@ import Heading from '../ui/Heading';
 
 const Hero = () => {
     return (
-        <section className="relative w-full h-screen max-h-[864px] min-h-[500px] overflow-hidden -mt-[165px] ">
+        <section className="relative w-full h-screen max-h-[864px] min-h-[500px] overflow-hidden md:-mt-[215px] lg:-mt-[184px] ">
             {/* Background Video/Image */}
             <div className="absolute inset-0 z-0 top-0 left-0 w-full h-full">
                 {/* Video Background */}
