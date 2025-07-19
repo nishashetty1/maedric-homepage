@@ -1,4 +1,5 @@
 import Header from "@/components/sections/Header";
+import HeaderMobile from "@/components/sections/HeaderMobile";
 import Hero from "@/components/sections/Hero";
 import Footer from "@/components/sections/Footer";
 import JewelleryType from "@/components/sections/JewelleryType";
@@ -16,6 +17,7 @@ export default function Home() {
     <div className="min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
       {/* <Header /> */}
       <Header />
+      <HeaderMobile />
 
       {/* Main Content */}
       <main className="flex flex-col items-center sm:items-start">
