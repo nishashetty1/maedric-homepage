@@ -20,7 +20,7 @@ export default function Header() {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1050);
     };
-    
+
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setIsScrolled(true);
@@ -31,11 +31,11 @@ export default function Header() {
 
     // Initial check
     handleResize();
-    
+
     // Add event listeners
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    
+
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -48,7 +48,7 @@ export default function Header() {
     { label: "Gemstones", href: "/gemstones", hasDropdown: true },
     { label: "Jewellery", href: "/jewellery", hasDropdown: true },
     { label: "Services", href: "/services" },
-    { label: "Education", href: "/education" },
+    { label: "About", href: "/about" },
   ];
 
   // Only apply the scrolled effect if we're on a large screen
@@ -124,7 +124,7 @@ export default function Header() {
         `}>
           <div className={`container mx-auto px-4 flex transition-all duration-500 ease-in-out 
             ${shouldApplyScrollEffect ? 'justify-between items-center' : 'justify-center'}`}>
-            
+
             {/* Logo - Only visible when scrolled on large screens */}
             {shouldApplyScrollEffect && (
               <motion.div

@@ -3,14 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-/**
- * WhatsappButton Component
- * 
- * A fixed position WhatsApp button with custom styling and animations
- * Sized appropriately for different screen sizes
- * 
- * @returns {JSX.Element} WhatsApp button component
- */
 const WhatsappButton = () => {
     const [visible, setVisible] = useState(false);
 
@@ -67,17 +59,41 @@ const WhatsappButton = () => {
                 transition-all
                 duration-300
                 hover:shadow-[0px_0px_10px_0px_rgba(255,255,255,0.5)]
+                overflow-hidden
+                cursor-pointer
+                group
             `}
         >
-            {/* WhatsApp icon with hover animation only */}
-            <div className="relative cursor-pointer">
-                <div className="transition-all duration-300 hover:scale-110 hover:rotate-6 hover:brightness-125">
+            {/* WhatsApp icon with refined animation */}
+            <div className="relative">
+                <div className="
+                    transition-all 
+                    duration-500 
+                    ease-out
+                    group-hover:scale-[1.15] 
+                    group-hover:brightness-110
+                    relative
+                    after:content-['']
+                    after:absolute
+                    after:inset-0
+                    after:bg-white/20
+                    after:rounded-full
+                    after:scale-0
+                    after:opacity-0
+                    group-hover:after:scale-[2]
+                    group-hover:after:opacity-100
+                    after:transition-all
+                    after:duration-700
+                    after:ease-out
+                    after:-z-10
+                    cursor-pointer
+                ">
                     <Image
                         src="/icons/whatsapp.svg"
                         alt="WhatsApp"
                         width={24}
                         height={24}
-                        className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8"
+                        className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 relative z-10"
                     />
                 </div>
             </div>
