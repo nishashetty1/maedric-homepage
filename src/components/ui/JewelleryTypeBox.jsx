@@ -20,10 +20,10 @@ export const JewelleryTypeBox = ({
 
   const boxContent = (
     <>
-      {/* Box with image - Now fully responsive */}
+      {/* Box with image */}
       <div
         className={twMerge(
-          "relative overflow-hidden aspect-square w-full max-w-[236px] bg-[#F6F6F6]",
+          "relative overflow-hidden aspect-square w-full max-w-[236px] bg-[#F6F6F6] group",
           className
         )}
         onMouseEnter={handleMouseEnter}
@@ -31,9 +31,11 @@ export const JewelleryTypeBox = ({
       >
         {/* Default image */}
         <div
-          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-            isHovered ? "opacity-0" : "opacity-100"
-          }`}
+          className="absolute inset-0 w-full h-full transition-all duration-700 ease-out transform scale-100"
+          style={{
+            opacity: isHovered ? 0 : 1,
+            transform: `scale(${isHovered ? 1.05 : 1})`,
+          }}
         >
           <Image
             src={defaultImage}
@@ -41,21 +43,24 @@ export const JewelleryTypeBox = ({
             fill
             sizes="(max-width: 640px) 30vw, (max-width: 768px) 25vw, 236px"
             className="object-cover"
+            priority
           />
         </div>
 
         {/* Hover image */}
         <div
-          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
+          className="absolute inset-0 w-full h-full transition-all duration-700 ease-out transform"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: `scale(${isHovered ? 1 : 1.05})`,
+          }}
         >
           <Image
             src={hoverImage || defaultImage}
             alt={`${title || "Jewellery item"} - alternate view`}
             fill
             sizes="(max-width: 640px) 30vw, (max-width: 768px) 25vw, 236px"
-            className="object-cover bg-[var(--primary-hover)]"
+            className="object-cover"
           />
         </div>
       </div>
@@ -76,7 +81,6 @@ export const JewelleryTypeBox = ({
     </>
   );
 
-  // If link is provided, wrap in anchor tag
   if (link) {
     return (
       <a
