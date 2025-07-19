@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Heading from "../ui/Heading";
+import ViewAllButton from "../ui/ViewAllButton";
 
 const CollectionCard = ({ index }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -16,26 +16,29 @@ const CollectionCard = ({ index }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative aspect-[3/4] w-full overflow-hidden">
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{ opacity: isHovered ? 0 : 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute inset-0"
+        {/* Default image */}
+        <div
+          className="absolute inset-0 transition-all duration-700 ease-out"
+          style={{
+            opacity: isHovered ? 0 : 1,
+            transform: `scale(${isHovered ? 1.05 : 1})`,
+          }}
         >
           <Image
             src={`/images/our-collections/oc${index}.png`}
             alt={`Collection ${index}`}
             fill
-            className="object-cover transition-transform duration-700 ease-out"
-            style={{ transform: isHovered ? "scale(1.05)" : "scale(1)" }}
+            className="object-cover"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute inset-0"
+        {/* Hover image */}
+        <div
+          className="absolute inset-0 transition-all duration-700 ease-out"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: `scale(${isHovered ? 1 : 1.05})`,
+          }}
         >
           <Image
             src={`/images/our-collections/oc${index}hover.png`}
@@ -43,30 +46,11 @@ const CollectionCard = ({ index }) => {
             fill
             className="object-cover"
           />
-        </motion.div>
+        </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 p-2 xs:p-3 sm:p-4 w-full bg-transparent backdrop-blur-sm">
-        <Link
-          href="/collections"
-          className="group inline-flex items-center gap-4"
-        >
-          <Heading
-            as="subheading"
-            align="left"
-            color="primary"
-            className="text-[var(--primary)] font-medium !mb-0"
-          >
-            Shop Collection
-          </Heading>
-          <Image
-            src="/icons/arrowright.svg"
-            alt="Arrow Right Icon"
-            width={10}
-            height={8}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </Link>
+      <div className="absolute bottom-0 left-0 p-2 xs:p-3 sm:p-4 w-full bg-transparent backdrop-blur-sm hover:backdrop-blur-lg">
+        <ViewAllButton href="/collections" text="Shop Collection" />
       </div>
     </div>
   );
@@ -88,26 +72,7 @@ const Collections = () => {
         </div>
 
         <div className="hidden md:block">
-          <Link
-            href="/collections"
-            className="group inline-flex items-center gap-4"
-          >
-            <Heading
-              as="subheading"
-              align="left"
-              color="primary"
-              className="text-[var(--primary)] font-medium !mb-0"
-            >
-              View All
-            </Heading>
-            <Image
-              src="/icons/arrowright.svg"
-              alt="Arrow Right Icon"
-              width={10}
-              height={8}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
+          <ViewAllButton href="/collections" />
         </div>
       </div>
 
@@ -131,26 +96,10 @@ const Collections = () => {
       </div>
 
       <div className="mt-3 sm:mt-4 text-right md:hidden">
-        <Link
+        <ViewAllButton
           href="/collections"
-          className="group inline-flex items-center gap-2 pr-2"
-        >
-          <Heading
-            as="subheading"
-            align="left"
-            color="primary"
-            className="text-[var(--primary)] font-medium !mb-0"
-          >
-            View All
-          </Heading>
-          <Image
-            src="/icons/arrowright.svg"
-            alt="Arrow Right Icon"
-            width={8}
-            height={6}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </Link>
+          className="pr-2"
+        />
       </div>
     </section>
   );

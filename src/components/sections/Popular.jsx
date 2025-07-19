@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import PopularBox from '../ui/PopularBox';
 import Heading from '../ui/Heading';
 import Link from 'next/link';
+import ViewAllButton from '../ui/ViewAllButton';
 
 const Popular = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -112,23 +113,9 @@ const Popular = () => {
 
       <div className="flex justify-end mb-4 px-4">
 
-        <Link href="/collections" className="group inline-flex items-center gap-4">
-            <Heading
-              as="subheading"
-              align="left"
-              color="primary"
-              className="text-[var(--primary)] font-medium !mb-0"
-            >
-              View All
-            </Heading>
-            <Image
-              src="/icons/arrowright.svg"
-              alt="Arrow Right Icon"
-              width={10}
-              height={8}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
+        <div className="hidden md:block">
+          <ViewAllButton href="/collections" />
+        </div>
       </div>
 
       <div className="relative px-12">
