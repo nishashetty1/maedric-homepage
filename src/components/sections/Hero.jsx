@@ -23,7 +23,7 @@ const Hero = () => {
             {/* Content Overlay - Desktop */}
             <div className="hidden md:flex absolute w-full h-full top-0 left-0 flex-col justify-end z-10">
                 <div className="flex flex-col w-full max-w-[700px] px-8 pb-16 lg:pb-20 lg:pl-20">
-                    
+
                     <Heading
                         as="header-text"
                         align="left"
