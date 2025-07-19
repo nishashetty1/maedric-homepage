@@ -10,7 +10,7 @@ const WhatsappButton = () => {
     useEffect(() => {
         const showTimer = setTimeout(() => {
             setVisible(true);
-        }, 1500);
+        }, 1000);
 
         return () => {
             clearTimeout(showTimer);
@@ -19,7 +19,7 @@ const WhatsappButton = () => {
 
     // WhatsApp click handler - opens WhatsApp with predefined message
     const handleWhatsAppClick = () => {
-        // You can customize the phone number and pre-filled message
+        
         const phoneNumber = '1234567890';
         const message = 'Hello! I\'m interested in your jewellery collection.';
 
@@ -46,7 +46,7 @@ const WhatsappButton = () => {
                 md:w-14
                 md:h-14
                 right-0 
-                bottom-[25vh]
+                bottom-[30vh]
                 z-[60]
                 rounded-l-md
                 border-b-[0.12px] 

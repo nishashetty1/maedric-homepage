@@ -19,7 +19,7 @@ const PopularBox = ({ id, image, category, name, isFavorite = false }) => {
           alt={name}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 25vw"
         />
 
         {/* Favorite button */}

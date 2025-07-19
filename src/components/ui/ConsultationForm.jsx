@@ -156,7 +156,7 @@ const ConsultationForm = ({ type }) => {
     }, []);
 
     return (
-        <div className="flex flex-col-reverse md:flex-row items-start gap-8 w-full max-w-[1400px] mx-auto ">
+        <div className="flex flex-col-reverse md:flex-row items-start gap-8 w-full max-w-[1100px] mx-auto ">
             <div className="md:w-1/2 w-full md:h-[600px] overflow-none md:overflow-y-scroll pr-5">
                 <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Name Field */}

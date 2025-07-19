@@ -57,7 +57,7 @@ const JewelleryConsultation = () => {
 
   // About Founder section
   const aboutFounder = (
-    <div className="flex flex-col md:flex-row items-start gap-8 max-w-[1400px] mx-auto">
+    <div className="flex flex-col md:flex-row items-start gap-8 max-w-[1100px] mx-auto">
       <div className="md:w-1/2 space-y-5">
         <div className="space-y-3">
           <Heading as="h1" align="left" color="var(--consultationForm)">
@@ -120,7 +120,7 @@ const JewelleryConsultation = () => {
 
   return (
     <section
-      className="py-12 w-full md:py-16 px-4 md:px-8 max-w-[1400px] mx-auto"
+      className="py-12 w-full md:py-16 px-4 md:px-8 max-w-[1100px] mx-auto"
       ref={formRef}
     >
       <div className="text-center mb-8 md:mb-12 hidden md:block">

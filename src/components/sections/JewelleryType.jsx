@@ -45,7 +45,7 @@ const JewelleryType = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1400px] mx-auto pt-10">
+    <section className="w-full max-w-[1100px] mx-auto pt-10">
       <div className="container mx-auto px-8">
         {/* Section Heading */}
         <div className="mb-8 md:mb-12">
@@ -57,7 +57,7 @@ const JewelleryType = () => {
         {/* Jewellery Type Grid - Responsive Layout */}
         <div className="flex flex-col items-center">
           {/* Desktop & Tablet: All items in a single row */}
-          <div className="hidden md:grid md:grid-cols-5 gap-4 lg:gap-8 w-full max-w-[1400px]">
+          <div className="hidden md:grid md:grid-cols-5 gap-4 lg:gap-8 w-full max-w-[1100px]">
             {jewelleryTypes.map((item) => (
               <div key={item.id} className="flex justify-center">
                 <JewelleryTypeBox

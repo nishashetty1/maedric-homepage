@@ -53,7 +53,7 @@ const Testimonial = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className="hidden md:block w-full py-16 max-w-[1400px] mx-auto">
+      <div className="hidden md:block w-full py-16 max-w-[1100px] mx-auto">
         <Heading as="h2" align="center" color="primary" className="mb-8">
           Client Testimonials
         </Heading>
@@ -66,7 +66,7 @@ const Testimonial = () => {
           Real stories from those who wear Maedric with pride.
         </Heading>
 
-        <div className="relative max-w-[1200px] mx-auto px-14">
+        <div className="relative max-w-[1100px] mx-auto px-14">
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}

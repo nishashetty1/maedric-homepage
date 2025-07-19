@@ -74,7 +74,7 @@ const CollectionCard = ({ index }) => {
 
 const Collections = () => {
   return (
-    <section className="w-full mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-[1400px]">
+    <section className="w-full mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-[1100px]">
       <div className="flex flex-wrap justify-between items-center md:mb-4">
         <div className="w-full md:w-auto text-center md:text-left">
           <Heading

@@ -91,7 +91,7 @@ const Process = ({ className = "" }) => {
   return (
     <div
       className={twMerge(
-        "w-full max-w-[1200px] mx-auto px-4 py-12 sm:py-16",
+        "w-full max-w-[1100px] mx-auto px-4 py-12 sm:py-16",
         className
       )}
     >

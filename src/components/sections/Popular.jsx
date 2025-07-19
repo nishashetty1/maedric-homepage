@@ -90,7 +90,7 @@ const Popular = () => {
   };
 
   return (
-    <div className="w-full py-12 max-w-[1400px] mx-auto hidden md:block">
+    <div className="w-full py-12 max-w-[1100px] mx-auto hidden md:block">
       <Heading
         as="h2"
         align="center"
